@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksoftedge_docs=self.webpackChunksoftedge_docs||[]).push([[903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/softedge-ui-docs/blog","blogTitle":"Blog","authorsListPath":"/softedge-ui-docs/blog/authors"}')}}]);
