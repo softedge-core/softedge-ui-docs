@@ -8,24 +8,12 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+function FeatureCard({ title, desc, href }) {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
+    <a className={styles.featureCard} href={href}>
+      <h3>{title}</h3>
+      <p>{desc}</p>
+    </a>
   );
 }
 
@@ -33,11 +21,41 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      title={`${siteConfig.title}`}
+      description="React component <head />">
+      {/* <HomepageHeader /> */}
+      <main className={styles.homepage}>
+        <div className={styles.hero}>
+          <h1>✨ SoftEdge UI</h1>
+          <p className={styles.subtitle}>
+            A modern React component library for building enterprise-level dashboards.
+          </p>
+          <div className={styles.buttons}>
+            <Link className={styles.primaryButton} to="/docs/getting-started/introduction">
+              📘 Get Started
+            </Link>
+            <Link
+              className={styles.secondaryButton}
+              to="https://github.com/softedge-core/softedge-ui"
+              target="_blank"
+            >
+              ⭐ GitHub Repo
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.features}>
+          <FeatureCard
+            title="🧱 SoftEdgeTable"
+            desc="Powerful data tables with filtering, grouping, pagination, and drag support."
+            href="/softedge-ui-docs/docs/getting-started/components/softedge-table"
+          />
+          <FeatureCard
+            title="🚀 Integration"
+            desc="Guides for Remix, Next.js (WIP), and custom frameworks."
+            href="/softedge-ui-docs/docs/getting-started/integration/remixjs"
+          />
+        </div>
       </main>
     </Layout>
   );
