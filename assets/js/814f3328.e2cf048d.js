@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksoftedge_docs=self.webpackChunksoftedge_docs||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"First Blog Post","permalink":"/softedge-ui-docs/blog/first-blog-post","unlisted":false,"date":"2025-05-11T00:00:00.000Z"}]}')}}]);

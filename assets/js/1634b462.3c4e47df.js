@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksoftedge_docs=self.webpackChunksoftedge_docs||[]).push([[641],{9463:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/softedge-ui-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
